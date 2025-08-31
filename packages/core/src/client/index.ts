@@ -550,7 +550,7 @@ export class CodeInspectorComponent extends LitElement {
       this.copyToClipboard(path[0]);
     }
     if (this.target) {
-      window.open(this.buildTargetUrl(), '_blank');
+      window.location.assign(this.buildTargetUrl());
     }
     window.dispatchEvent(new CustomEvent('code-inspector:trackCode', {
       detail: this.element,
@@ -771,13 +771,15 @@ export class CodeInspectorComponent extends LitElement {
         }
       });
     const replacement = '%c';
-    console.log(
-      `${replacement}[code-inspector-plugin]${replacement}Press and hold ${keys.join(
-        ` ${replacement}+ `
-      )}${replacement} to enable the feature. (click on page elements to locate the source code in the editor)`,
-      'color: #006aff; font-weight: bolder; font-size: 12px;',
-      ...colors
-    );
+    if (false as any) {
+      console.log(
+        `${replacement}[code-inspector-plugin]${replacement}Press and hold ${keys.join(
+          ` ${replacement}+ `
+        )}${replacement} to enable the feature. (click on page elements to locate the source code in the editor)`,
+        'color: #006aff; font-weight: bolder; font-size: 12px;',
+        ...colors
+      );
+    }
   };
 
   // 获取鼠标位置

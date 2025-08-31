@@ -1,5 +1,5 @@
 {
-  "name": "@code-inspector/core",
+  "name": "@thomasjahoda-forks/code-inspector-core",
   "version": "1.2.6",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",
